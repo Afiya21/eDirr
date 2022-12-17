@@ -1,6 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Sidebar.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/elogo.png";
+import { Link } from "react-router-dom";
+
 
 const Sidebar = ({ sidebarOpen, closeSidebar }) => {
   return (
@@ -8,7 +10,7 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__title">
         <div className="sidebar__img">
           <img src={logo} alt="logo" />
-          <h1>MobbyPark</h1>
+          <h1>e-dirr</h1>
         </div>
         <i
           onClick={() => closeSidebar()}
@@ -21,59 +23,49 @@ const Sidebar = ({ sidebarOpen, closeSidebar }) => {
       <div className="sidebar__menu">
         <div className="sidebar__link active_menu_link">
           <i className="fa fa-home"></i>
-          <a href="#">Dashboard</a>
+         
+          <a href="/">Dashboard</a>
+          
         </div>
-        <h2>MNG</h2>
+        <h2>insurance</h2>
         <div className="sidebar__link">
           <i className="fa fa-user-secret" aria-hidden="true"></i>
-          <a href="#">Admin Management</a>
+          <a href="/healthinsurance">health insurance</a> 
+         
         </div>
         <div className="sidebar__link">
           <i className="fa fa-building-o"></i>
-          <a href="#">Company Management</a>
+          <a href="/Educationinsurance">education insurance</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-wrench"></i>
-          <a href="#">Employee Management</a>
+          <a href="/Eventinsurance">event insurance</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-archive"></i>
-          <a href="#">Warehouse</a>
+          <a href="/Users">users</a>
         </div>
-        <div className="sidebar__link">
-          <i className="fa fa-handshake-o"></i>
-          <a href="#">Contracts</a>
-        </div>
-        <h2>LEAVE</h2>
+       
+        <h2>debt</h2>
         <div className="sidebar__link">
           <i className="fa fa-question"></i>
-          <a href="#">Requests</a>
+          <a href="#">startup debt</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-sign-out"></i>
-          <a href="#">Leave Policy</a>
+          <a href="#">material debt</a>
         </div>
-        <div className="sidebar__link">
-          <i className="fa fa-calendar-check-o"></i>
-          <a href="#">Special Days</a>
-        </div>
-        <div className="sidebar__link">
-          <i className="fa fa-files-o"></i>
-          <a href="#">Apply for leave</a>
-        </div>
-        <h2>PAYROLL</h2>
+       
+        <h2>transaction</h2>
         <div className="sidebar__link">
           <i className="fa fa-money"></i>
-          <a href="#">Payroll</a>
+          <a href="#">income</a>
         </div>
         <div className="sidebar__link">
           <i className="fa fa-briefcase"></i>
-          <a href="#">Paygrade</a>
+          <a href="#">outsource</a>
         </div>
-        <div className="sidebar__logout">
-          <i className="fa fa-power-off"></i>
-          <a href="#">Log out</a>
-        </div>
+       
       </div>
     </div>
   );
